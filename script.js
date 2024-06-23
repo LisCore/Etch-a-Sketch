@@ -21,18 +21,14 @@ function createGrid(numGrids, eachGrid) {
 const etch = document.querySelector("#grid");
 grid.addEventListener("mouseover", (event) => {
     if (event.target.classList.contains('grid-cell')) {
-        event.target.style.backgroundColor = "black";
+        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        randomColor = "#" + randomColor.padStart(6, '0');
+        event.target.style.backgroundColor = randomColor;
     }
 });
 
 let input = document.querySelector("#text");
 const btn = document.querySelector("#transform");
-// btn.addEventListener("click", () => {
-//     let value = parseInt(input.value);
-//     numGrids = value;
-//     removeGrid();
-//     createGrid(numGrids, eachGrid);
-// });
 btn.addEventListener("click", () => {
     numGrids = prompt("Enter in grid size:");
     if (numGrids > 100 || numGrids <= 0) {
