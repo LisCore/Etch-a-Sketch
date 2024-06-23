@@ -33,6 +33,15 @@
     border: 1px solid black;
 }
 
+.grid-cell:hover {
+    /* background-color: black; */
+}
+
 h1 {
     text-align: center;
+}
+
+#transform {
+    width: 100px;
+    padding: 10px;
 }
