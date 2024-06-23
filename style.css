@@ -1,0 +1,38 @@
+#container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+    /* text-wrap: nowrap; */
+}
+
+#text-content {
+    display: inline-block;
+    text-align: start;
+    max-width: 400px;
+    margin-left: 200px;
+    /* margin: auto;
+    padding: auto; */
+}
+
+#grid-hold {
+    width: 500px;
+    height: 500px;
+    border: 1px black solid;
+    margin: auto;
+    padding: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px red solid;
+    border-radius: 5px;
+}
+
+.grid-cell {
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+h1 {
+    text-align: center;
+}
