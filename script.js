@@ -21,6 +21,10 @@ function createGrid(numGrids, eachGrid) {
 const etch = document.querySelector("#grid");
 grid.addEventListener("mouseover", (event) => {
     if (event.target.classList.contains('grid-cell')) {
+        let currentOpacity = parseFloat(event.target.style.opacity) || 0;
+        currentOpacity += 0.1;
+        if (currentOpacity > 1) currentOpacity = 1;
+        event.target.style.opacity = currentOpacity;
         let randomColor = Math.floor(Math.random() * 16777215).toString(16);
         randomColor = "#" + randomColor.padStart(6, '0');
         event.target.style.backgroundColor = randomColor;
